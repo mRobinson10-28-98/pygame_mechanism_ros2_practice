@@ -1,5 +1,7 @@
 import pygame as py
 
+from Screen import Screen
+
 def main(args=None):
     print("TESTING")
 
@@ -14,5 +16,5 @@ def main(args=None):
         for event in py.event.get():
             if event.type == py.QUIT:
                 run = False
-                
+
         py.display.update()

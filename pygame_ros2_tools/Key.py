@@ -1,5 +1,5 @@
 import pygame as py
-from Clock import Clock
+from pygame_ros2_tools.Clock import Clock
 
 
 class Key(Clock):

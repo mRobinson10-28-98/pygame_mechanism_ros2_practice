@@ -1,9 +1,9 @@
 import pygame as py
 
-import Variables as v
-import Keys as ks
-from Point import Point
-from Button import Button
+import pygame_ros2_tools.Variables as v
+import pygame_ros2_tools.Keys as ks
+from pygame_ros2_tools.Point import Point
+from pygame_ros2_tools.Button import Button
 
 
 class Screen:
@@ -31,6 +31,9 @@ class Screen:
 
         self.point_index = 0
         self.current_point = 0
+
+        # Initial point
+        self.initial_point = Point(self, self.inches_to_pixels(self.origin_x), self.inches_to_pixels(self.origin_y + 3), 0, self.points)
 
         self.xy = True
         self.planar_path = True

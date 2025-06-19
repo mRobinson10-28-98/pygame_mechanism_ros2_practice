@@ -1,6 +1,6 @@
 import pygame as py
 
-import Variables as v
+import pygame_ros2_tools.Variables as v
 
 class Button:
     def __init__(self, screen, y, height, name, boolean, color):

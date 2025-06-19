@@ -1,6 +1,6 @@
 import pygame as py
 
-from Key import Key
+from pygame_ros2_tools.Key import Key
 
 left_click = Key(0)
 right_click = Key(2, debounceTime=10)

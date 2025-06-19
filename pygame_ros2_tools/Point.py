@@ -1,7 +1,7 @@
 import pygame as py
 import math as m
 
-import Variables as v
+import pygame_ros2_tools.Variables as v
 
 # Point class defines the position of a point for inverse kinematics
 # Must give an x,y,z position, as well as the screen object

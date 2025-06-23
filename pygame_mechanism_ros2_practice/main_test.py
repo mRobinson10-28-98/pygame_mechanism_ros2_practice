@@ -12,5 +12,6 @@ def main(args=None):
     while run:
         screen.initialize()
         screen.draw()
+        
 
 py.quit()

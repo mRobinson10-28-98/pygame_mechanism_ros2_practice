@@ -20,7 +20,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'test1 = pygame_mechanism_ros2_practice.main_test:main'
+            'render_trace_circle = pygame_mechanism_ros2_practice.Manip2Dof_Pygame:main',
+            'test = pygame_mechanism_ros2_practice.main_test:main'
+
         ],
     },
 )

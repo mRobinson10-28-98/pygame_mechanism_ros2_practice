@@ -12,7 +12,7 @@ class Point:
         self.y = int(y)
         self.z = int(z)
         self.screen = screen
-        self.set = set
+        self.set = self.screen.points
 
         self.color = v.red
         self.radius = 3

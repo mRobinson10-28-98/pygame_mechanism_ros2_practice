@@ -95,6 +95,10 @@ class Screen:
 
         py.display.update()
 
+    # Delete previous point
+    def pop_point(self):
+        self.points.pop(-1)
+
     def check_key_commands(self, input_array):
         # If "z" is pressed, delete previous point, and add it to deleted points list
         if ks.z_click.clicked(input_array) and len(self.points) > 1:
@@ -124,6 +128,7 @@ class Screen:
                 self.point_index = len(self.points) - 1
             ks.j_click.refresh()
 
+        # Shift point to the left a lil bit
         if ks.a_click.clicked(input_array):
             if self.xy:
                 self.current_point.x -= 1
@@ -131,6 +136,7 @@ class Screen:
                 self.current_point.z -= 1
             ks.a_click.refresh()
 
+        # Shift point to the right a lil bit
         if ks.d_click.clicked(input_array):
             if self.xy:
                 self.current_point.x += 1
@@ -138,10 +144,12 @@ class Screen:
                 self.current_point.z += 1
             ks.d_click.refresh()
 
+        # Shift point up a lil bit
         if ks.w_click.clicked(input_array):
             self.current_point.y -= 1
             ks.w_click.refresh()
 
+        # Shift point down a lil bit
         if ks.s_click.clicked(input_array):
             self.current_point.y += 1
             ks.s_click.refresh()

@@ -37,8 +37,6 @@ class Screen:
 
         self.xy = True
         self.planar_path = True
-        self.xy_modifier = Button(self, 10, 25, "XY SCREEN", True, v.green)
-        self.planar_path_modifier = Button(self, 50, 25, "Keep Path Planar", True, v.green)
 
     # Converts length from pixels to inches (usually for kinematic analysis)
     def pixels_to_inches(self, pixels):
@@ -54,8 +52,6 @@ class Screen:
 
         self.linkages = []
         self.current_point = self.points[self.point_index]
-        self.xy = self.xy_modifier.boolean
-        self.planar_path = self.planar_path_modifier.boolean
 
         for event in py.event.get():
             if event.type == py.QUIT:
@@ -98,6 +94,10 @@ class Screen:
     # Delete previous point
     def pop_point(self):
         self.points.pop(-1)
+
+    # Delete first point in set
+    def delete_point(self):
+        self.points.pop(0)
 
     def check_key_commands(self, input_array):
         # If "z" is pressed, delete previous point, and add it to deleted points list

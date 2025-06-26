@@ -20,4 +20,4 @@ class Linkage:
     def render(self):
         if self.xy == self.screen.xy:
             py.draw.line(self.screen.window, self.color, (self.x1, self.y1),
-                         (self.x2, self.y2), 12)
+                         (self.x2, self.y2), 4)

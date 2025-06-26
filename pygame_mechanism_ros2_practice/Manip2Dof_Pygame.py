@@ -38,13 +38,13 @@ class Manip2Dof_SolutionSub(Node):
 
 
         self.req = Manip2DofProperties.Request()
-        self.screen = screen
-
         future = self.request_manip_properties()
         rclpy.spin_until_future_complete(self, future)
 
         self.link_lengths = [future.result().l1, future.result().l2]
         self.joint_config = [0, 0]
+        
+        self.screen = screen
 
         # To avoid unused var warnings
         self.solution_sub

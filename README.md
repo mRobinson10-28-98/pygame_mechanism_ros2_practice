@@ -1,0 +1,1 @@
+This repository includes supporting resources for rendering manipulators used by other repositories and is not meant to be used as a standalone. See https://github.com/mRobinson10-28-98/ROS2_Manip2Dof
